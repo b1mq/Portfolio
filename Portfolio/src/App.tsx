@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { 
   Layout, 
   Typography, 
@@ -14,7 +14,6 @@ import {
 } from 'antd';
 import { 
   GithubOutlined, 
-  CodeOutlined, 
   BranchesOutlined,
   UserOutlined,
   ReadOutlined,
