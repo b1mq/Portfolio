@@ -3,6 +3,7 @@ import Csharp from "./docs/c_sharp_basic certificate.pdf";
 import Zeugins from "./docs/Zeugnis.pdf";
 import PythonCert from "./docs/python_basic certificate (2).pdf";
 import MyPhoto from "./assets/images/photo.jpg";
+
 import {
   Layout,
   Typography,
@@ -1064,5 +1065,6 @@ export default function App() {
         {new Date().getFullYear()}
       </Footer>
     </Layout>
+    
   );
 }
