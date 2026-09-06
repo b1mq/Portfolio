@@ -20,7 +20,6 @@ export const customTheme: ThemeConfig = {
     Card: {
       colorBgContainer: '#0f1712',
       colorBorder: '#1c3326',
-      colorHeaderBg: '#0f1712',
       colorTextHeading: '#ffffff',
     },
     Tag: {
