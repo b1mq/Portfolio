@@ -1,4 +1,5 @@
 import  { useState } from 'react';
+import MyPhoto from "./assets/images/photo.jpg";
 import { 
   Layout, 
   Typography, 
@@ -116,7 +117,7 @@ export default function App() {
         <Space size="small">
           <Avatar 
             size="medium" 
-            src={`https://github.com/${GITHUB_USERNAME}.png`} 
+            src={MyPhoto} 
             icon={<GithubOutlined />} 
           />
           <Text style={{ fontWeight: 700, fontSize: isMobile ? '15px' : '18px', color: '#f0fdf4' }}>
@@ -142,7 +143,7 @@ export default function App() {
           </Space>
         )}
 
-        {/* Actions / Mobile Menu Button */}
+       
         <Space>
           <Button 
             type="dashed" 
@@ -173,7 +174,7 @@ export default function App() {
         </Space>
       </Header>
 
-      {/* MOBILE DRAWER MENU */}
+     
       <Drawer
         title={<Text style={{ color: '#ffffff' }}>Navigation</Text>}
         placement="right"
@@ -209,7 +210,7 @@ export default function App() {
 
       <Content style={{ padding: isMobile ? '0 12px' : '0 24px', maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
         
-        {/* HERO SECTION */}
+       
         <section style={{ padding: isMobile ? '40px 0 20px 0' : '70px 0 40px 0' }}>
           <Row gutter={[24, 24]} align="middle">
             <Col xs={24} md={16} style={{ textAlign: isMobile ? 'center' : 'left' }}>
@@ -248,7 +249,7 @@ export default function App() {
               <Card style={{ background: '#0f1712', borderColor: '#1c3326', textAlign: 'center' }}>
                 <Avatar 
                   size={isMobile ? 80 : 110} 
-                  src={`https://github.com/${GITHUB_USERNAME}.png`} 
+                  src={MyPhoto} 
                   style={{ marginBottom: 16, border: '2px solid #10b981' }} 
                 />
                 <Title level={3} style={{ marginBottom: 4, color: '#ffffff', fontSize: isMobile ? '20px' : '24px' }}>Yehor Tahirov</Title>
@@ -265,7 +266,7 @@ export default function App() {
 
         <Divider style={{ borderColor: '#1c3326' }} />
 
-        {/* ABOUT ME SECTION */}
+        
         <section id="about" style={{ padding: '30px 0' }}>
           <Title level={2} style={{ fontSize: isMobile ? '22px' : '28px', marginBottom: 20, color: '#ffffff' }}>
             <UserOutlined style={{ color: '#10b981', marginRight: 10 }} />
@@ -326,7 +327,7 @@ export default function App() {
 
         <Divider style={{ borderColor: '#1c3326' }} />
 
-        {/* EDUCATION TIMELINE SECTION */}
+        
         <section id="education" style={{ padding: '30px 0' }}>
           <Text style={{ fontFamily: 'monospace', color: '#10b981' }}>$ cat education_timeline.log</Text>
           <Title level={2} style={{ fontSize: isMobile ? '22px' : '28px', marginTop: 8, marginBottom: 24, color: '#ffffff' }}>
@@ -407,7 +408,7 @@ export default function App() {
 
         <Divider style={{ borderColor: '#1c3326' }} />
 
-        {/* SKILLS SECTION */}
+       
         <section id="skills" style={{ padding: '30px 0' }}>
           <Text style={{ fontFamily: 'monospace', color: '#10b981' }}>$ ls skills/</Text>
           <Title level={2} style={{ fontSize: isMobile ? '22px' : '28px', marginTop: 4, marginBottom: 20, color: '#ffffff' }}>
@@ -438,7 +439,6 @@ export default function App() {
                   <Tag color="purple">Dapper</Tag>
                   <Tag color="cyan">React</Tag>
                   <Tag color="blue">Ant Design</Tag>
-                  <Tag color="volcano">Playwright</Tag>
                 </Space>
               </Card>
             </Col>
