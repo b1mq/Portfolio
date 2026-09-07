@@ -3,7 +3,7 @@ import Csharp from "./docs/c_sharp_basic certificate.pdf";
 import Zeugins from "./docs/Zeugnis.pdf";
 import PythonCert from "./docs/python_basic certificate (2).pdf";
 import MyPhoto from "./assets/images/photo.jpg";
-
+import CsharpMicrosoft from "./docs/Foundational_CSharp_Microsoft_Yehor_Tahirov.png"
 import {
   Layout,
   Typography,
@@ -295,7 +295,7 @@ export default function App() {
               style={{ textAlign: isMobile ? "center" : "left" }}
             >
               <Tag
-                color="emerald"
+                color="green"
                 style={{
                   marginBottom: 12,
                   borderColor: "#10b981",
@@ -498,7 +498,7 @@ export default function App() {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <Text style={{ color: "#e5e7eb" }}>Deutsch:</Text>
-                    <Tag color="emerald">Gut / B2-C1</Tag>
+                    <Tag color="green">Gut / B2-C1</Tag>
                   </div>
                   <div
                     style={{ display: "flex", justifyContent: "space-between" }}
@@ -584,7 +584,7 @@ export default function App() {
                   color: "#10b981",
                   children: (
                     <div style={{ padding: "4px 0" }}>
-                      <Tag color="emerald">2022 — 2024</Tag>
+                      <Tag color="green">2022 — 2024</Tag>
                       <Title
                         level={4}
                         style={{
@@ -719,7 +719,7 @@ export default function App() {
                 <Space wrap size={[6, 8]}>
                   <Tag color="green">C#</Tag>
                   <Tag color="green">C++</Tag>
-                  <Tag color="emerald">Python</Tag>
+                  <Tag color="green">Python</Tag>
                   <Tag color="cyan">TypeScript</Tag>
                   <Tag color="blue">JavaScript</Tag>
                   <Tag color="orange">HTML5</Tag>
@@ -759,7 +759,7 @@ export default function App() {
               >
                 <Space wrap size={[6, 8]}>
                   <Tag color="green">Clean Architecture</Tag>
-                  <Tag color="emerald">OOP Principles</Tag>
+                  <Tag color="green">OOP Principles</Tag>
                   <Tag color="cyan">SOLID</Tag>
                   <Tag color="gold">CQRS & MediatR</Tag>
                   <Tag color="orange">Design Patterns</Tag>
@@ -790,6 +790,125 @@ export default function App() {
               ? "Zertifikate & Dokumente zum Download"
               : "Certificates & Documents"}
           </Title>
+          <section id="featured-cert" style={{ padding: "30px 0" }}>
+            <Text style={{ fontFamily: "monospace", color: "#10b981" }}>
+              $ cat certification/microsoft.json
+            </Text>
+            <Title
+              level={2}
+              style={{
+                fontSize: isMobile ? "22px" : "28px",
+                marginTop: 4,
+                marginBottom: 20,
+                color: "#ffffff",
+              }}
+            >
+              <SafetyCertificateOutlined
+                style={{ color: "#10b981", marginRight: 10 }}
+              />
+              {lang === "DE"
+                ? "Anerkannte Zertifizierung"
+                : "Featured Certification"}
+            </Title>
+
+            <Card
+              style={{
+                background: "#0f1712",
+                borderColor: "#1c3326",
+                overflow: "hidden",
+                borderLeft: "4px solid #10b981",
+              }}
+            >
+              <Row gutter={[24, 24]} align="middle">
+                <Col xs={24} lg={12}>
+                  <div
+                    style={{
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                      border: "1px solid #1c3326",
+                    }}
+                  >
+                    <img
+                      src={CsharpMicrosoft}
+                      alt="Foundational C# with Microsoft Developer Certification"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        display: "block",
+                      }}
+                    />
+                  </div>
+                </Col>
+
+                <Col xs={24} lg={12}>
+                  <Space wrap size={[0, 8]} style={{ marginBottom: 12 }}>
+                    <Tag color="blue">Microsoft</Tag>
+                    <Tag color="green">freeCodeCamp</Tag>
+                    <Tag color="green">Verified Developer Certification</Tag>
+                  </Space>
+
+                  <Title
+                    level={3}
+                    style={{
+                      color: "#ffffff",
+                      margin: "4px 0 12px 0",
+                      fontSize: isMobile ? "20px" : "24px",
+                    }}
+                  >
+                    Foundational C# with Microsoft
+                  </Title>
+
+                  <Paragraph
+                    style={{
+                      color: "#d1d5db",
+                      fontSize: "14px",
+                      lineHeight: "1.7",
+                    }}
+                  >
+                    {lang === "DE"
+                      ? "Offizielles Entwickler-Zertifikat von Microsoft und freeCodeCamp. Umfasst fundamentale C#-Konzepte, objektorientierte Logik, Datenverarbeitung, Fehlerbehandlung und Konsolenanwendungen im .NET-Ökosystem."
+                      : "Official developer certification co-issued by Microsoft and freeCodeCamp. Validates core C# language mechanics, object-oriented concepts, data manipulation, exception handling, and console applications in the .NET ecosystem."}
+                  </Paragraph>
+
+                  <Text
+                    type="secondary"
+                    style={{
+                      fontSize: "12px",
+                      display: "block",
+                      marginBottom: 16,
+                    }}
+                  >
+                    {lang === "DE" ? "Ausgestellt am:" : "Issued on:"} September
+                    7, 2026 • Executive Director: Quincy Larson & Julia Liuson
+                    (Microsoft)
+                  </Text>
+
+                  <Space wrap>
+                    <Button
+                      type="primary"
+                      icon={<GlobalOutlined />}
+                      href="https://freecodecamp.org/certification/yehortahirov/foundational-c-sharp-with-microsoft"
+                      target="_blank"
+                    >
+                      {lang === "DE"
+                        ? "Zertifikat Verifizieren"
+                        : "Verify Certification"}
+                    </Button>
+                    <Button
+                      icon={<DownloadOutlined />}
+                      href="/certs/foundational_csharp_microsoft.png"
+                      target="_blank"
+                      download={CsharpMicrosoft}
+                    >
+                      {lang === "DE" ? "Bild herunterladen" : "Download Image"}
+                    </Button>
+                  </Space>
+                </Col>
+              </Row>
+            </Card>
+          </section>
+
+          <Divider style={{ borderColor: "#1c3326" }} />
 
           {/* ZEUGNIS CARD */}
           <Card
@@ -847,7 +966,6 @@ export default function App() {
             </Row>
           </Card>
 
-          
           <Row gutter={[20, 20]}>
             {CERTIFICATES.map((cert) => (
               <Col xs={24} md={12} key={cert.id}>
@@ -1065,6 +1183,5 @@ export default function App() {
         {new Date().getFullYear()}
       </Footer>
     </Layout>
-    
   );
 }
